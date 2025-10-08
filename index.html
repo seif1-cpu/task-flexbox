@@ -14,3 +14,34 @@
         </section>
     </body>
 </html>
+/* Устанавливаем стили для контейнера */
+.container {
+    width: 700px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between; /* Распределяем элементы по оси X с равными промежутками */
+    align-items: flex-start; /* Выравнивание элементов по верхнему краю по оси Y */
+}
+
+/* Стили для кругов */
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #DAA520;
+    border-radius: 50%; /* Делаем элемент круглым */
+}
+
+/* Специфические стили для каждого круга */
+.circle:nth-child(1),
+.circle:nth-child(5) {
+    align-self: flex-start; /* Первый и пятый элемент прижаты к верхнему краю */
+}
+
+.circle:nth-child(2),
+.circle:nth-child(4) {
+    align-self: center; /* Второй и четвертый элемент по центру по оси Y */
+}
+
+.circle:nth-child(3) {
+    align-self: flex-end; /* Третий элемент внизу по оси Y */
+}
